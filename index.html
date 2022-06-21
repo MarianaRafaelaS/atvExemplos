@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Map e Reduce </title>
+</head>
+
+<body>
+  
+  <script>
+  console.log("--- Método Map ---");
+  // O Map lê (mapeia) todos os elementos de um array, executa uma função callback (chamada de retorno) para cada elemento e retorna o resultado em um novo array sem modificar o array original.
+  // Sintaxe do map: arrayOriginal.map(callback)
+  // Sintaxe do callback: function(valorAtual |obrigatório|, índice |opcional|, arrayOriginal |opcional|)
+  
+  console.log("--- Exemplo 1 ---");
+  
+  var raiz = [3,5,7,9,11];
+  var res = raiz.map(numero => Math.sqrt(numero));
+  console.log(res);
+  
+  console.log("--- Exemplo 2 ---");
+  var clientes[
+  {
+    nome: "João"
+    idade: "20"
+    cidade: "Fortaleza"
+  }
+  {
+    nome: "Maria"
+    idade: "32"
+    cidade: "Iguatu"
+  }
+  {
+    nome: "Ana"
+    idade: "19"
+    cidade: "Salvador"
+  }
+  {
+    nome: "José"
+    idade: "43"
+    cidade: "Manaus"
+  }
+  ];
+  
+  var idades = clientes.map(function(item,indice){
+    return item.idade;
+  });
+  
+  console.log(idades);
+  
+  console.log("--- Método Reduce ---");
+  // Reduz os itens de um array a um único valor e não se limita apenas a números. Também utiliza o callback.
+  // Sintaxe do reduce: array.reduce(callback[, valorInicial]);
+  
+  console.log("--- Exemplo 1 ---");
+  var num = [2,4,5,8,10];
+  var total = num.reduce(function(total, num){
+    return total + num;
+  }, 0);
+  console.log(total);
+  
+  console.log("--- Exemplo 2 ---");
+  
+  const numeros = [7,9,8,7];
+  const soma = numeros.reduce((soma, elemento) => soma + elemento);
+  console.log(soma);
+  </script>
+</body>
+</html>
